@@ -1,0 +1,24 @@
+name: Events Demo 1
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'main'
+      - 'dev-*'
+      - 'feat/**'
+  workflow_dispatch:
+  push:
+    branches: 
+      - 'main'
+      - 'dev-*'
+      - 'feat/**'
+    paths-ignore:
+      './github/workflows/*'
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo "Esempio di workflow attivato da 'event filters' e 'activity Types'"
