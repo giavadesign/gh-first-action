@@ -10,5 +10,6 @@ jobs:
         run: | 
           echo "Hello World"
           echo "How is doing?"
+          echo "La pipe serve per eseguire comandi su più righe come in questo caso"
       - name: Print GoodBye
         run: echo "Done - Good bye"
